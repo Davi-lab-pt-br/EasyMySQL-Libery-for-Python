@@ -1,8 +1,8 @@
 import mysql.connector
 
-class Conectar:
+class Connect():
     @staticmethod
-    def conexao():
+    def connetion():
         return mysql.connector.connect(
             host='localhost',
             user='root',
@@ -12,8 +12,8 @@ class Conectar:
 
 class CURSOR:
     def __init__(self):
-        self.conexao = Conectar.conexao()  # Usando a conexão da classe Conectar
-        self.cursor = self.conexao.cursor()
+        self.connection = Connect.connection()  
+        self.cursor = self.connection.cursor()
 
-    def executar_comando(self,comando):
-        self.cursor.execute(comando)
+    def executar_comando(self,command):
+        self.cursor.execute(command)
