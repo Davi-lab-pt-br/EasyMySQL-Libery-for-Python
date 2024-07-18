@@ -4,10 +4,10 @@ class Connect():
     @staticmethod
     def connetion():
         return mysql.connector.connect(
-            host='localhost',
-            user='root',
-            password='admin',
-            database='bdyoutube'
+            host='your host',
+            user='your user',
+            password='your password',
+            database='your database'
         )
 
 class CURSOR:
