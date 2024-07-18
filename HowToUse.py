@@ -16,4 +16,4 @@ cursor.execute_command(command)
 cursor.Connection.commit()
 
 connect.Connection.close()
-cursor.close
+cursor.close()
