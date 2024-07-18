@@ -7,10 +7,13 @@ connect = Connect()
 cursor = CURSOR()
 
 # Comando SQL
-command = 'INSERT INTO bdyoutube.vendas_dois (name, value) VALUES ('Soda can', $4.50)'
+command = 'INSERT INTO bdyoutube.vendas_dois (name, value) VALUES ("Soda can", $4.50)'
 
-# Executando o comando
+# Running the command
 cursor.execute_command(command)
 
-# Lembre-se de commit se necessário
-cursor.connexion.commit()
+# Remember, the commit is necessary
+cursor.Connection.commit()
+
+connect.Connection.close()
+cursor.close
