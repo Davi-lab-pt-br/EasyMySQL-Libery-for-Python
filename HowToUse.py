@@ -1,16 +1,16 @@
 from EasyMySQL import *
 
 # Criando a conexão
-conectar = Conectar()
+connect = Conectar()
 
 # Criando o cursor
 cursor = CURSOR()
 
 # Comando SQL
-comando = 'INSERT INTO bdyoutube.vendas_dois (nome, valor) VALUES ("coco", 2)'
+command = 'INSERT INTO bdyoutube.vendas_dois (nome, valor) VALUES ("coco", 2)'
 
 # Executando o comando
-cursor.executar_comando(comando)
+cursor.execute_command(command)
 
 # Lembre-se de commit se necessário
-cursor.conexao.commit()
+cursor.connexion.commit()
