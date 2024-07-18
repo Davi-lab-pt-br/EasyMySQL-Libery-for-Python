@@ -18,9 +18,6 @@ class Connect():
             database='Your database'
         ).close()
 
-    def connection_close_other_alternative():
-        Connect.Connection.close()
-
 class CURSOR:
     def __init__(self):
         self.connection = Connect.Connection()  # Usando a conexão da classe Conectar
