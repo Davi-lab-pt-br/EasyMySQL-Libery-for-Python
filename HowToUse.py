@@ -15,5 +15,5 @@ cursor.execute_command(command)
 # Remember, the commit is necessary
 cursor.Connection.commit()
 
-connect.Connection.close()
+connect.connection.close()
 cursor.close()
