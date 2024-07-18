@@ -2,18 +2,32 @@ import mysql.connector
 
 class Connect():
     @staticmethod
-    def connetion():
+    def connection():
         return mysql.connector.connect(
-            host='your host',
-            user='your user',
-            password='your password',
-            database='your database'
+            host='localhost',
+            user='root',
+            password='admin',
+            database='bdyoutube'
         )
+    
+    def connection_close():
+        mysql.connector.connect(
+            host='Your host',
+            user='Your user',
+            password='Your password',
+            database='Your database'
+        ).close()
 
 class CURSOR:
     def __init__(self):
-        self.connection = Connect.connection()  
-        self.cursor = self.connection.cursor()
+        self.conexao = Conectar.conexao()  # Usando a conexão da classe Conectar
+        self.cursor = self.conexao.cursor()
 
-    def executar_comando(self,command):
-        self.cursor.execute(command)
+    def executar_comando(self,comando):
+        self.cursor.execute(comando)
+
+    def fechall(self):
+        self.cursor.fetchall()
+
+    def close(self):
+        self.cursor.close()
