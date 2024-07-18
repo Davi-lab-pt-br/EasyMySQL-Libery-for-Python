@@ -1,0 +1,5 @@
+Instructions
+
+Put the EasyMySQL.py on your path Project and import it.
+
+this is only a demo version.
